@@ -7,7 +7,7 @@ class Message {
 
     messageReceived(message) {
         try {
-            validator.setData(JSON.parse(message.body)).execute().then(r => console.log('SQS processed'))
+            validator.setData(JSON.parse(message.Body)).execute().then(r => console.log('SQS processed'));
         } catch (e) {
             console.log('ERROR', e.message || e);
         }
